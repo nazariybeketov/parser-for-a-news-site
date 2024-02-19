@@ -3,13 +3,13 @@ from progress.bar import IncrementalBar
 import xlsxwriter
 from main import mr_assembler, PROGRESS_BAR_FOR
 
-mylist = [i for i in range(1, PROGRESS_BAR_FOR - 1)]
+mylist = [i for i in range(1, PROGRESS_BAR_FOR)]
 bar = IncrementalBar("PROGRESS", max=len(mylist))
 
 
 def writer(arr=mr_assembler) -> None:
     print("\n")
-    book = xlsxwriter.Workbook("/Users/nazarijbeketov/Desktop/www/articles.xlsx")
+    book = xlsxwriter.Workbook("/Users/nazarijbeketov/Desktop/parser-for-a-news-site/articles.xlsx")
     page = book.add_worksheet("Articles")
 
     row, column = 0, 0
